@@ -25,7 +25,7 @@ public enum TableAnimation {
             return TableAnimationFactory.makeMoveDownBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
         case .moveLeftBounce(let rowHeight, let duration, let delay):
             return TableAnimationFactory.makeMoveLeftBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
-        case .moveLeftBounce(let rowHeight, let duration, let delay):
+        case .moveRightBounce(let rowHeight, let duration, let delay):
             return TableAnimationFactory.makeMoveRightBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
         }
     }
