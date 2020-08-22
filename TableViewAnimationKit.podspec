@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TableViewAnimationKit"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "Framework for TableView animation"
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "TableViewAnimationKit/**/*.{h,m}", 'TableViewAnimationKit/**/*.swift'
-  spec.swift_versions = '>4.0'
+  spec.swift_versions = ['4.0', '4.2', '5.0', '5.2']
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
