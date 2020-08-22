@@ -14,65 +14,96 @@ public final class TableViewAnimator {
     }
 }
 
-///enums providing tableViewCell animations
 public enum TableAnimationFactory {
     
-    /// fades the cell by setting alpha as zero and then animates the cell's alpha based on indexPaths
-    public static func makeFadeAnimation(duration: TimeInterval, delayFactor: TimeInterval) -> TableCellAnimation {
+    public static func makeFadeAnimation(duration: TimeInterval,
+                                         delayFactor: TimeInterval) -> TableCellAnimation {
         return { cell, indexPath, _ in
             cell.alpha = 0
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                animations: {
-                    cell.alpha = 1
-            })
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           animations: {
+                            cell.alpha = 1
+                           })
         }
     }
     
-    /// fades the cell by setting alpha as zero and moves the cell downwards, then animates the cell's alpha and returns it to it's original position based on indexPaths
-    public static func makeMoveUpWithFadeAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: TimeInterval) -> TableCellAnimation {
+    public static func makeMoveUpWithFadeAnimation(rowHeight: CGFloat,
+                                                   duration: TimeInterval,
+                                                   delayFactor: TimeInterval) -> TableCellAnimation {
         return { cell, indexPath, _ in
-            cell.transform = CGAffineTransform(translationX: 0, y: rowHeight * 1.4)
+            cell.transform = CGAffineTransform(translationX: 0, y:
+                rowHeight * 1.4)
             cell.alpha = 0
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                options: [.curveEaseInOut],
-                animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-                    cell.alpha = 1
-            })
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                            cell.alpha = 1
+                           })
         }
     }
 
-    /// moves the cell downwards, then animates the cell's by returning them to their original position based on indexPaths
-    public static func makeMoveUpAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: TimeInterval) -> TableCellAnimation {
+    public static func makeMoveUpAnimation(rowHeight: CGFloat,
+                                           duration: TimeInterval,
+                                           delayFactor: TimeInterval) -> TableCellAnimation {
         return { cell, indexPath, _ in
             cell.transform = CGAffineTransform(translationX: 0, y: rowHeight * 1.4)
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                options: [.curveEaseInOut],
-                animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                           })
         }
     }
     
-    /// moves the cell downwards, then animates the cell's by returning them to their original position with spring bounce based on indexPaths
-    public static func makeMoveUpBounceAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> TableCellAnimation {
+    public static func makeMoveDownBounceAnimation(rowHeight: CGFloat,
+                                                   duration: TimeInterval,
+                                                   delayFactor: Double) -> TableCellAnimation {
+        return { cell, indexPath, tableView in
+            cell.transform = CGAffineTransform(translationX: -rowHeight, y:
+                0)
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           usingSpringWithDamping: 0.6,
+                           initialSpringVelocity: 0.1,
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                           })
+        }
+    }
+    
+    public static func makeMoveUpBounceAnimation(rowHeight: CGFloat,
+                                                 duration: TimeInterval,
+                                                 delayFactor: Double) -> TableCellAnimation {
         return { cell, indexPath, tableView in
             cell.transform = CGAffineTransform(translationX: 0, y: rowHeight)
-            UIView.animate(
-                withDuration: duration,
-                delay: delayFactor * Double(indexPath.row),
-                usingSpringWithDamping: 0.6,
-                initialSpringVelocity: 0.1,
-                options: [.curveEaseInOut],
-                animations: {
-                    cell.transform = CGAffineTransform(translationX: 0, y: 0)
-            })
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           usingSpringWithDamping: 0.6,
+                           initialSpringVelocity: 0.1,
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                           })
+        }
+    }
+    
+    public static func makeMoveLeftBounceAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> TableCellAnimation {
+        return { cell, indexPath, tableView in
+            cell.transform = CGAffineTransform(translationX: -rowHeight, y:
+                0)
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           usingSpringWithDamping: 0.6,
+                           initialSpringVelocity: 0.1,
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                           })
         }
     }
 }
