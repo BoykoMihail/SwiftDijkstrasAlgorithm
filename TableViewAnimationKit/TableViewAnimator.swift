@@ -5,11 +5,11 @@ public typealias TableCellAnimation = (UITableViewCell, IndexPath, UITableView) 
 public final class TableViewAnimator {
     private let animation: TableCellAnimation
     
-    init(animation: @escaping TableCellAnimation) {
+    public init(animation: @escaping TableCellAnimation) {
         self.animation = animation
     }
     
-    func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
+    public func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
         animation(cell, indexPath, tableView)
     }
 }
