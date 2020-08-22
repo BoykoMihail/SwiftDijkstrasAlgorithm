@@ -8,6 +8,7 @@ public enum TableAnimation {
     case moveUpBounce(rowHeight: CGFloat, duration: TimeInterval, delay: TimeInterval)
     case moveDownBounce(rowHeight: CGFloat, duration: TimeInterval, delay: TimeInterval)
     case moveLeftBounce(rowHeight: CGFloat, duration: TimeInterval, delay: TimeInterval)
+    case moveRightBounce(rowHeight: CGFloat, duration: TimeInterval, delay: TimeInterval)
     
     // provides an animation with duration and delay associated with the case
     public func getAnimation() -> TableCellAnimation {
@@ -24,6 +25,8 @@ public enum TableAnimation {
             return TableAnimationFactory.makeMoveDownBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
         case .moveLeftBounce(let rowHeight, let duration, let delay):
             return TableAnimationFactory.makeMoveLeftBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
+        case .moveLeftBounce(let rowHeight, let duration, let delay):
+            return TableAnimationFactory.makeMoveRightBounceAnimation(rowHeight: rowHeight, duration: duration, delayFactor: delay)
         }
     }
 }

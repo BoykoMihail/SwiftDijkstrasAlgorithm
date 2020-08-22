@@ -63,8 +63,8 @@ public enum TableAnimationFactory {
                                                    duration: TimeInterval,
                                                    delayFactor: Double) -> TableCellAnimation {
         return { cell, indexPath, tableView in
-            cell.transform = CGAffineTransform(translationX: -rowHeight, y:
-                0)
+            cell.transform = CGAffineTransform(translationX: 0, y:
+                -rowHeight)
             UIView.animate(withDuration: duration,
                            delay: delayFactor * Double(indexPath.row),
                            usingSpringWithDamping: 0.6,
@@ -95,6 +95,21 @@ public enum TableAnimationFactory {
     public static func makeMoveLeftBounceAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> TableCellAnimation {
         return { cell, indexPath, tableView in
             cell.transform = CGAffineTransform(translationX: -rowHeight, y:
+                0)
+            UIView.animate(withDuration: duration,
+                           delay: delayFactor * Double(indexPath.row),
+                           usingSpringWithDamping: 0.6,
+                           initialSpringVelocity: 0.1,
+                           options: [.curveEaseInOut],
+                           animations: {
+                            cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                           })
+        }
+    }
+    
+    public static func makeMoveRightBounceAnimation(rowHeight: CGFloat, duration: TimeInterval, delayFactor: Double) -> TableCellAnimation {
+        return { cell, indexPath, tableView in
+            cell.transform = CGAffineTransform(translationX: rowHeight, y:
                 0)
             UIView.animate(withDuration: duration,
                            delay: delayFactor * Double(indexPath.row),
