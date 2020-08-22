@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "Framework for TableView animation. First attempt to create framework"
 
-  spec.homepage     = "https://github.com/BoykoMihail/TableViewAnimationKit/"
+  spec.homepage     = "https://github.com/BoykoMihail/TableViewAnimationKit.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "TableViewAnimationKit/**/*.{h,m}"
+  spec.source_files  = "TableViewAnimationKit/**/*"
   # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
