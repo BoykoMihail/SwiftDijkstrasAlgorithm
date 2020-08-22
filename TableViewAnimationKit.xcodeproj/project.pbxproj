@@ -50,12 +50,20 @@
 		5E7BC17424F1248700B3E119 /* TableViewAnimationKit */ = {
 			isa = PBXGroup;
 			children = (
-				5E7BC17524F1248700B3E119 /* TableViewAnimationKit.h */,
+				5E7BC18124F1305700B3E119 /* Classes */,
 				5E7BC17624F1248700B3E119 /* Info.plist */,
-				5E7BC17D24F12BCC00B3E119 /* TableViewAnimator.swift */,
-				5E7BC17F24F12BEE00B3E119 /* TableAnimation.swift */,
 			);
 			path = TableViewAnimationKit;
+			sourceTree = "<group>";
+		};
+		5E7BC18124F1305700B3E119 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5E7BC17D24F12BCC00B3E119 /* TableViewAnimator.swift */,
+				5E7BC17F24F12BEE00B3E119 /* TableAnimation.swift */,
+				5E7BC17524F1248700B3E119 /* TableViewAnimationKit.h */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
