@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5E7BC17724F1248700B3E119 /* TableViewAnimationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7BC17524F1248700B3E119 /* TableViewAnimationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7BC17E24F12BCC00B3E119 /* TableViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BC17D24F12BCC00B3E119 /* TableViewAnimator.swift */; };
+		5E7BC18024F12BEE00B3E119 /* TableAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BC17F24F12BEE00B3E119 /* TableAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E7BC17224F1248700B3E119 /* TableViewAnimationKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableViewAnimationKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7BC17524F1248700B3E119 /* TableViewAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewAnimationKit.h; sourceTree = "<group>"; };
 		5E7BC17624F1248700B3E119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E7BC17D24F12BCC00B3E119 /* TableViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAnimator.swift; sourceTree = "<group>"; };
+		5E7BC17F24F12BEE00B3E119 /* TableAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				5E7BC17524F1248700B3E119 /* TableViewAnimationKit.h */,
 				5E7BC17624F1248700B3E119 /* Info.plist */,
+				5E7BC17D24F12BCC00B3E119 /* TableViewAnimator.swift */,
+				5E7BC17F24F12BEE00B3E119 /* TableAnimation.swift */,
 			);
 			path = TableViewAnimationKit;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					5E7BC17124F1248700B3E119 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -131,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7BC17E24F12BCC00B3E119 /* TableViewAnimator.swift in Sources */,
+				5E7BC18024F12BEE00B3E119 /* TableAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 		5E7BC17B24F1248700B3E119 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 49G77KD6LG;
@@ -276,6 +286,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.boyko.tableView.animation.TableViewAnimationKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +295,7 @@
 		5E7BC17C24F1248700B3E119 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 49G77KD6LG;
