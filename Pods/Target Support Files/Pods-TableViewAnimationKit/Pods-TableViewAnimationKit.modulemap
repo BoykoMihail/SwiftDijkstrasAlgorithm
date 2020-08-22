@@ -1,0 +1,6 @@
+framework module Pods_TableViewAnimationKit {
+  umbrella header "Pods-TableViewAnimationKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
