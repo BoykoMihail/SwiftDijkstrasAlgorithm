@@ -59,7 +59,7 @@ pod 'TableViewAnimationKit', :git => 'https://github.com/BoykoMihail/TableViewAn
 
 ### Carthage
 
-BouncyLayout is available through [Carthage](https://github.com/Carthage/Carthage). To install
+TableViewAnimationKit is available through [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Cartfile:
 
 ```
