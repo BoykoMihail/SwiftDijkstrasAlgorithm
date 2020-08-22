@@ -1,10 +1,25 @@
 # TableViewAnimationKit
 <p float="center">
-     <img src="Gif/moveRightBounce.gif" width=20%>
-     <img src="Gif/moveLeftBounce.gif" width=20%>
-     <img src="Gif/moveDownBounce.gif" width=20%>
-     <img src="Gif/moveUpBounce.gif" width=20%>
-     <img src="Gif/fadeIn.gif" width=20%>
+    <div class="img-with-text">
+        <img src="Gif/moveRightBounce.gif" width=20%>
+        <p>moveRightBounce</p>
+    </div>
+    <div class="img-with-text">
+        <img src="Gif/moveLeftBounce.gif" width=20%>
+        <p>moveLeftBounce</p>
+    </div>
+    <div class="img-with-text">
+        <img src="Gif/moveDownBounce.gif" width=20%>
+        <p>moveDownBounce</p>
+    </div>
+    <div class="img-with-text">
+        <img src="Gif/moveUpBounce.gif" width=20%>
+        <p>moveUpBounce</p>
+    </div>
+    <div class="img-with-text">
+        <img src="Gif/fadeIn.gif" width=20%>
+        <p>fadeIn</p>
+    </div>
 </p>
 
 **TableViewAnimationKit** it is a library for quickly customizing animation of table cells.
